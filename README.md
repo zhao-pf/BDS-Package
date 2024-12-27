@@ -1,33 +1,143 @@
 # BDS-Package
-BDS整合包，一键安装+配置BDS
+
+BDS 整合包，一键安装+配置 BDS
 
 ## 使用方法
+
 1. 安装[Lip](https://github.com/futrime/lip/releases)
    1. 前往[Lip](https://github.com/futrime/lip/releases)发行版页面
-   2. 下载最新版`lip-windows-amd64-setup.exe`(Lip安装程序)
+   2. 下载最新版`lip-windows-amd64-setup.exe`(Lip 安装程序)
    3. 运行`lip-windows-amd64-setup.exe`并按照提示完成安装`(请勿取消勾选Add to PATH)`
-2. `[可选]`设置Github镜像→`lip config GitHubMirrorURL https://github.bibk.top`
-3. `[可选]`设置Go模块代理镜像→`lip config GoModuleProxyURL https://goproxy.cn`
-4. 安装整合包→`lip install -y github.com/zimuya4153/BDS-Package`
+2. `[可选]`设置 Github 镜像 →`lip config GitHubMirrorURL https://github.bibk.top`
+3. `[可选]`设置 Go 模块代理镜像 →`lip config GoModuleProxyURL https://goproxy.cn`
+4. 安装整合包 →`lip install -y github.com/zimuya4153/BDS-Package`
 
 ## 安装列表
+
 - [7-zip(命令行式压缩工具)](https://gitea.litebds.com/ShrBox/7-zip)
 - [BDS(服务端本体)](ithub.com/LiteLDev/bds)
 - [PreLoader(预加载工具)](https://github.com/LiteLDev/PeEditor)
-- [LeviLamina(Native插件加载器)](https://github.com/LiteLDev/LeviLamina)
+- [LeviLamina(Native 插件加载器)](https://github.com/LiteLDev/LeviLamina)
 - [CrashLogger(崩溃信息收集/崩溃日志)](https://github.com/LiteLDev/CrashLogger)
-- [LeviLamina-loc(LeviLamina语言包)](https://github.com/LiteLDev/levilamina-loc)
-- [legacy-script-engine-lua(Lua插件加载器)](https://gitea.litebds.com/LiteLDev/legacy-script-engine-lua)
-- [legacy-script-engine-nodejs(NodeJS插件加载器)](https://gitea.litebds.com/LiteLDev/legacy-script-engine-nodejs)
-- [legacy-script-engine-quickjs(QuickJS插件加载器)](https://gitea.litebds.com/LiteLDev/legacy-script-engine-quickjs)
-- [node-binaries(NodeJS运行环境)](https://gitea.litebds.com/LiteLDev/node-binaries)
+- [LeviLamina-loc(LeviLamina 语言包)](https://github.com/LiteLDev/levilamina-loc)
+- [legacy-script-engine-lua(Lua 插件加载器)](https://gitea.litebds.com/LiteLDev/legacy-script-engine-lua)
+- [legacy-script-engine-nodejs(NodeJS 插件加载器)](https://gitea.litebds.com/LiteLDev/legacy-script-engine-nodejs)
+- [legacy-script-engine-quickjs(QuickJS 插件加载器)](https://gitea.litebds.com/LiteLDev/legacy-script-engine-quickjs)
+- [node-binaries(NodeJS 运行环境)](https://gitea.litebds.com/LiteLDev/node-binaries)
 - [LegacyMoney(经济系统)](https://github.com/LiteLDev/LegacyMoney)
-- [LegacyParticleAPI(粒子生成器API)](https://github.com/LiteLDev/LegacyParticleAPI)
-- [LegacyRemoteCall(远程调用API)](https://github.com/LiteLDev/LegacyRemoteCall)
-- [GMLIB(API前置库)](https://github.com/GroupMountain/GMLIB)
-- [GMLIB-LegacyRemoteCallApi(GMLIB的LSE插件兼容)](https://github.com/GroupMountain/GMLIB-LegacyRemoteCallApi)
-- [LegacyAddonsManager(Addon管理器)](https://github.com/LiteLDev/LegacyAddonsManager)
-- [LeviAntiCheat(Lac反作弊)](https://github.com/LiteLDev/LeviAntiCheat)
-- [LeviOptimize(BDS优化插件)](https://github.com/LiteLDev/LeviOptimize)
+- [LegacyParticleAPI(粒子生成器 API)](https://github.com/LiteLDev/LegacyParticleAPI)
+- [LegacyRemoteCall(远程调用 API)](https://github.com/LiteLDev/LegacyRemoteCall)
+- [GMLIB(API 前置库)](https://github.com/GroupMountain/GMLIB)
+- [GMLIB-LegacyRemoteCallApi(GMLIB 的 LSE 插件兼容)](https://github.com/GroupMountain/GMLIB-LegacyRemoteCallApi)
+- [LegacyAddonsManager(Addon 管理器)](https://github.com/LiteLDev/LegacyAddonsManager)
+- [LeviAntiCheat(Lac 反作弊)](https://github.com/LiteLDev/LeviAntiCheat)
+- [LeviOptimize(BDS 优化插件)](https://github.com/LiteLDev/LeviOptimize)
 - [more-dimensions(多维度插件)](https://github.com/LiteLDev/MoreDimensions)
 - [iListenAttentively(事件前置库)](https://github.com/MiracleForest/iListenAttentively)
+
+## 命令帮助
+
+- LeviLamina
+  - `tp` - 传送命令
+    - `/tp <目的地坐标> <维度ID> [忽略维度坐标转换]`
+      - `/tp 0 0 0 overworld` - 传送自己到主世界 0 0 0 位置
+      - `/tp 0 0 0 nether true` - 传送自己到主世界 0 0 0 位置(忽略维度坐标转换)
+      - `/tp ~ ~ ~ nether true` - 传送自己到当前坐标位置的地狱维度
+    - `/tp <实体> <目的地坐标> <维度ID> [忽略维度坐标转换]`
+      - `/tp @p 0 0 0 overworld` - 传送最近玩家到主世界 0 0 0 位置
+      - `/tp @e[type=minecraft:player] 0 0 0 overworld` - 传送所有玩家到主世界 0 0 0 位置
+      - `/tp @e[type=minecraft:player] 0 0 0 nether true` - 传送所有玩家到地狱 0 0 0 位置(忽略维度坐标转换)
+  - `crash` - 崩溃命令
+    - `/crash [异常ID]`
+      - `/crash` - 崩溃
+      - `/crash 1` - 崩溃(异常 ID 为 1)
+  - `version` - 查看版本
+    - `/version` - 查看当前服务端 BDS 和 LeviLamina 版本
+      - `/version` - 查看当前服务端 BDS 和 LeviLamina 版本
+  - `memstats` - 查看内存占用
+    - `/memstats` - 查看当前服务端内存占用
+      - `/memstats` - 查看当前服务端内存占用
+  - `levilamina/ll` - Mod 管理命令
+    - `ll load <模组名称>` - 加载 Mod
+      - `ll load GMLIB` - 加载 GMLIB 插件
+    - `ll <enable|disable|show> <模组名称>` - 启用 Mod/禁用 Mod/显示 Mod 信息
+      - `ll enable GMLIB` - 启用 GMLIB 插件
+      - `ll disable GMLIB` - 禁用 GMLIB 插件
+      - `ll show GMLIB` - 显示 GMLIB 插件信息
+    - `ll <reload|unload|reactivate> <模组名称>` - 重载 Mod/卸载 Mod/重新激活 Mod
+      - `ll reload GMLIB` - 重载 GMLIB 插件(unload 再 load)
+      - `ll unload GMLIB` - 卸载 GMLIB 插件
+      - `ll reactivate GMLIB` - 重新激活 GMLIB 插件(disable 再 enable)
+    - `ll list` - 列出所有已加载的 Mod
+      - `ll list` - 列出所有已加载的 Mod
+- LegacyMoney
+  - `money` - 经济系统命令
+    - `/money <adds|reduces|sets> <玩家选择器> <金额>` - 增加/减少/设置金额(目标选择器)
+      - `/money adds @p 100` - 给最近玩家增加 100 金额
+      - `/money reduces @a 100` - 给所有玩家减少 100 金额
+      - `/money sets @s 100` - 给自己设置 100 金额
+    - `/money <set|add|reduce|pay> <玩家名> <金额>` - 增加/减少/设置金额(玩家名,支持离线玩家)
+      - `/money set LiteLDev 100` - 给 LiteLDev 设置 100 金额
+      - `/money add LiteLDev 100` - 给 LiteLDev 增加 100 金额
+      - `/money reduce LiteLDev 100` - 给 LiteLDev 减少 100 金额
+      - `/money pay LiteLDev 100` - 给 LiteLDev 转账 100 金额
+    - `/money hist <玩家名> [多长时间内(单位:秒)]` - 查看玩家历史交易记录
+      - `/money hist LiteLDev` - 查看 LiteLDev 一天内的历史交易记录
+      - `/money hist LiteLDev 3600` - 查看 LiteLDev 最近 1 小时内历史交易记录
+    - `/money purge confirm [多久之前(单位:秒)]` - 清除历史交易记录`(所有玩家,不是个人)`
+      - `/money purge confirm` - 清除所有历史交易记录
+      - `/money purge confirm 3600` - 清除 1 小时之前的所有历史交易记录
+    - `/money query [玩家名]` - 查看金额
+      - `/money query` - 查看自己金额
+      - `/money query LiteLDev` - 查看 LiteLDev 的金额
+    - `/money querys <玩家选择器>` - 查看玩家金额
+      - `/money querys @a` - 查看所有玩家金额
+      - `/money querys @p` - 查看最近玩家金额
+    - `/money top [数量(最大100)]` - 查看金额排行榜
+      - `/money top` - 查看金额排行榜前十
+      - `/money top 5` - 查看金额排行榜前五
+- LegacyAddonsManager
+  - `addons` - Addon 管理命令
+    - `/addons <remove|enable|disable|uninstall> <索引值(通过list获取)>` - 删除/启用/禁用/卸载 Addon
+      - `/addons remove 0` - 删除第一个 Addon
+      - `/addons enable 0` - 启用第一个 Addon
+      - `/addons disable 0` - 禁用第一个 Addon
+      - `/addons uninstall 0` - 卸载第一个 Addon
+    - `/addons <remove|enable|disable|uninstall> <Addon名>` - 删除/启用/禁用/卸载 Addon
+      - `/addons remove TInformationBar` - 删除 TInformationBar Addon
+      - `/addons enable TInformationBar` - 启用 TInformationBar Addon
+      - `/addons disable TInformationBar` - 禁用 TInformationBar Addon
+    - `/addons install <路径>` - 安装 Addon
+      - `/addons install "./TInformationBar.mcpack"` - 安装服务端根目录下的 TInformationBar.mcpack Addon
+    - `/addons list [索引值]` - 列出所有 Addon/获取 Addon 信息
+      - `/addons list` - 列出所有 Addon
+      - `/addons list 0` - 列出第一个 Addon 信息
+    - `/addons list [Addon名]` - 列出所有 Addon/获取 Addon 信息
+      - `/addons list` - 列出所有 Addon
+      - `/addons list TInformationBar` - 列出 TInformationBar Addon 信息
+- LeviAntiCheat
+  - `lac` - lac 命令
+    - `/lac reload` - 重载配置文件
+    - `/lac reload` - 重载 lac 配置文件
+    - `lac <ban|unban> <玩家名> [原因] [封禁时间(单位:分钟)]` - 封禁/解封玩家
+      - `/lac ban LiteLDev` - 封禁 LiteLDev
+      - `/lac unban LiteLDev` - 解封 LiteLDev
+      - `/lac ban LiteLDev "作弊" 60` - 封禁 LiteLDev60 分钟,原因:作弊
+- LeviOptimize
+  - `timing` - 显示服务器性能统计信息
+    - `/timing` - 显示服务器性能统计信息
+- legacy-script-engine-lua
+  - `luadebug` - Lua 代码调试命令
+    - `/luadebug [代码]` - 调试代码
+      - `/luadebug` - 进入 Lua 代码调试模式
+      - `/luadebug print("Hello World!")` - 调试代码`print("Hello World!")`
+- legacy-script-engine-nodejs
+  - `nodejsdebug` - NodeJS 代码调试命令
+    - `/nodejsdebug [代码]` - 调试代码
+      - `/nodejsdebug` - 进入 NodeJS 代码调试模式
+      - `/nodejsdebug console.log("Hello World!")` - 调试代码`console.log("Hello World!")`
+- legacy-script-engine-quickjs
+  - `jsdebug` - QuickJS 代码调试命令
+    - `/jsdebug [代码]` - 调试代码
+      - `/jsdebug` - 进入 NodeJS 代码调试模式
+      - `/jsdebug log("Hello World!")` - 调试代码`log("Hello World!")`

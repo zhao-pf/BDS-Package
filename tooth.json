@@ -1,7 +1,7 @@
 {
     "format_version": 2,
     "tooth": "github.com/zimuya4153/BDS-Package",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "info": {
         "name": "BDS整合包",
         "description": "一键安装+配置BDS基础设施",
@@ -35,6 +35,10 @@
             {
                 "src": "legacy_money_config.json",
                 "dest": "plugins/LegacyMoney/money.json"
+            },
+            {
+                "src": "levi_anti_cheat_config.json",
+                "dest": "plugins/LeviAntiCheat/config/config.json"
             },
             {
                 "src": "levilamina-config.json",
